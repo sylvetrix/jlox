@@ -1,0 +1,18 @@
+<project default="compile">
+
+	<target name="clean">
+		<delete dir="bin"/>
+	</target>
+
+	<target name="compile" depends="clean,generate">
+		<mkdir dir="bin"/>
+		<javac srcdir="src" destdir="bin" includeantruntime="false"/>
+	</target>
+
+	<target name="generate">
+		<delete dir="src/com/jlox/generated"/>
+		<mkdir dir="src/com/jlox/generated"/>
+		<xslt processor="trax" in="xslt/ExprClasses.xml" style="xslt/Expr.xslt" out="src/com/jlox/generated/Expr.java"/>
+	</target>
+
+</project>

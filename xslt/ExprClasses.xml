@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<subclasses>
+	<subclass class="Binary">
+		<property type="Expr" name="left"/>
+		<property type="Token" name="operator"/>
+		<property type="Expr" name="right"/>
+	</subclass>
+	<subclass class="Grouping">
+		<property type="Expr" name="expression"/>
+	</subclass>
+	<subclass class="Literal">
+		<property type="Object" name="value"/>
+	</subclass>
+	<subclass class="Unary">
+		<property type="Token" name="operator"/>
+		<property type="Expr" name="right"/>
+	</subclass>
+</subclasses>
