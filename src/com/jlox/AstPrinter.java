@@ -1,6 +1,6 @@
 package com.jlox;
 
-import com.jlox.generated.*;
+import com.jlox.generated.Expr;
 
 // creates an unambiguous, if ugly, string representation of AST nodes
 class AstPrinter implements Expr.Visitor<String>
@@ -23,7 +23,7 @@ class AstPrinter implements Expr.Visitor<String>
 	}
 
 	@Override
-	public String visitExpr(Expr.Literal expr)
+	public String visitLiteralExpr(Expr.Literal expr)
 	{
 		return expr.value.toString();
 	}
