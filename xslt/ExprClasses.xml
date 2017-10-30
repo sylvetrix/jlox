@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<subclasses>
+<baseclass base="Expr" var="expr">
 	<subclass class="Binary">
 		<property type="Expr" name="left"/>
 		<property type="Token" name="operator"/>
@@ -15,4 +15,4 @@
 		<property type="Token" name="operator"/>
 		<property type="Expr" name="right"/>
 	</subclass>
-</subclasses>
+</baseclass>
