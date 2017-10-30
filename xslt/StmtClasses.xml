@@ -6,4 +6,8 @@
 	<subclass class="Print">
 		<property type="Expr" name="expression"/>
 	</subclass>
+	<subclass class="Var">
+		<property type="Token" name="name"/>
+		<property type="Expr" name="initializer"/>
+	</subclass>
 </baseclass>

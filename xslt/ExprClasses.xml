@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <baseclass base="Expr" var="expr">
+	<subclass class="Assign">
+		<property type="Token" name="name"/>
+		<property type="Expr" name="value"/>
+	</subclass>
 	<subclass class="Binary">
 		<property type="Expr" name="left"/>
 		<property type="Token" name="operator"/>
@@ -14,5 +18,8 @@
 	<subclass class="Unary">
 		<property type="Token" name="operator"/>
 		<property type="Expr" name="right"/>
+	</subclass>
+	<subclass class="Variable">
+		<property type="Token" name="name"/>
 	</subclass>
 </baseclass>

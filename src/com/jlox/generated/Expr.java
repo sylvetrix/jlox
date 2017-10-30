@@ -11,6 +11,7 @@ public abstract class Expr
 		R visitGroupingExpr(Grouping expr);
 		R visitLiteralExpr(Literal expr);
 		R visitUnaryExpr(Unary expr);
+		R visitVariableExpr(Variable expr);
 	}
 
 	public static class Binary extends Expr
@@ -76,6 +77,21 @@ public abstract class Expr
 		public <R> R accept(Visitor<R> visitor)
 		{
 			return visitor.visitUnaryExpr(this);
+		}
+	}
+
+	public static class Variable extends Expr
+	{
+		public final Token name;
+
+		public Variable(Token name)
+		{
+			this.name = name;
+		}
+
+		public <R> R accept(Visitor<R> visitor)
+		{
+			return visitor.visitVariableExpr(this);
 		}
 	}
 
