@@ -6,7 +6,9 @@
 
 	<target name="compile" depends="clean,generate">
 		<mkdir dir="bin"/>
-		<javac srcdir="src" destdir="bin" includeantruntime="false"/>
+		<javac srcdir="src" destdir="bin" includeantruntime="false">
+			<exclude name="com/jlox/AstPrinter.java"/>
+		</javac>
 	</target>
 
 	<target name="generate">

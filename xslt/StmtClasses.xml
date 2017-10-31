@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <baseclass base="Stmt" var="stmt">
+	<subclass class="Block">
+		<property type="List&lt;Stmt&gt;" name="statements"/>
+	</subclass>
 	<subclass class="Expression">
 		<property type="Expr" name="expression"/>
 	</subclass>
