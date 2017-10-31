@@ -15,6 +15,11 @@
 	<subclass class="Literal">
 		<property type="Object" name="value"/>
 	</subclass>
+	<subclass class="Logical">
+		<property type="Expr" name="left"/>
+		<property type="Token" name="operator"/>
+		<property type="Expr" name="right"/>
+	</subclass>
 	<subclass class="Unary">
 		<property type="Token" name="operator"/>
 		<property type="Expr" name="right"/>
