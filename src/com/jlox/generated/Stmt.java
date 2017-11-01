@@ -9,8 +9,10 @@ public abstract class Stmt
 	{
 		R visitBlockStmt(Block stmt);
 		R visitExpressionStmt(Expression stmt);
+		R visitFunctionStmt(Function stmt);
 		R visitIfStmt(If stmt);
 		R visitPrintStmt(Print stmt);
+		R visitReturnStmt(Return stmt);
 		R visitVarStmt(Var stmt);
 		R visitWhileStmt(While stmt);
 	}
@@ -45,6 +47,25 @@ public abstract class Stmt
 		}
 	}
 
+	public static class Function extends Stmt
+	{
+		public final Token name;
+		public final List<Token> parameters;
+		public final List<Stmt> body;
+
+		public Function(Token name, List<Token> parameters, List<Stmt> body)
+		{
+			this.name = name;
+			this.parameters = parameters;
+			this.body = body;
+		}
+
+		public <R> R accept(Visitor<R> visitor)
+		{
+			return visitor.visitFunctionStmt(this);
+		}
+	}
+
 	public static class If extends Stmt
 	{
 		public final Expr condition;
@@ -76,6 +97,23 @@ public abstract class Stmt
 		public <R> R accept(Visitor<R> visitor)
 		{
 			return visitor.visitPrintStmt(this);
+		}
+	}
+
+	public static class Return extends Stmt
+	{
+		public final Token keyword;
+		public final Expr value;
+
+		public Return(Token keyword, Expr value)
+		{
+			this.keyword = keyword;
+			this.value = value;
+		}
+
+		public <R> R accept(Visitor<R> visitor)
+		{
+			return visitor.visitReturnStmt(this);
 		}
 	}
 

@@ -103,7 +103,7 @@ public class Lox
 		}
 		else
 		{
-			report(token.line, " at'" + token.lexeme + "'", message);
+			report(token.line, " at '" + token.lexeme + "'", message);
 		}
 	}
 }

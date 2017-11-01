@@ -6,6 +6,11 @@
 	<subclass class="Expression">
 		<property type="Expr" name="expression"/>
 	</subclass>
+	<subclass class="Function">
+		<property type="Token" name="name"/>
+		<property type="List&lt;Token&gt;" name="parameters"/>
+		<property type="List&lt;Stmt&gt;" name="body"/>
+	</subclass>
 	<subclass class="If">
 		<property type="Expr" name="condition"/>
 		<property type="Stmt" name="thenBranch"/>
@@ -13,6 +18,10 @@
 	</subclass>
 	<subclass class="Print">
 		<property type="Expr" name="expression"/>
+	</subclass>
+	<subclass class="Return">
+		<property type="Token" name="keyword"/>
+		<property type="Expr" name="value"/>
 	</subclass>
 	<subclass class="Var">
 		<property type="Token" name="name"/>

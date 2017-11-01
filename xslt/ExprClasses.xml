@@ -9,6 +9,11 @@
 		<property type="Token" name="operator"/>
 		<property type="Expr" name="right"/>
 	</subclass>
+	<subclass class="Call">
+		<property type="Expr" name="callee"/>
+		<property type="Token" name="paren"/>
+		<property type="List&lt;Expr&gt;" name="arguments"/>
+	</subclass>
 	<subclass class="Grouping">
 		<property type="Expr" name="expression"/>
 	</subclass>
