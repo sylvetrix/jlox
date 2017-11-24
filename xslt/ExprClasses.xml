@@ -14,6 +14,10 @@
 		<property type="Token" name="paren"/>
 		<property type="List&lt;Expr&gt;" name="arguments"/>
 	</subclass>
+	<subclass class="Get">
+		<property type="Expr" name="object"/>
+		<property type="Token" name="name"/>
+	</subclass>
 	<subclass class="Grouping">
 		<property type="Expr" name="expression"/>
 	</subclass>
@@ -24,6 +28,11 @@
 		<property type="Expr" name="left"/>
 		<property type="Token" name="operator"/>
 		<property type="Expr" name="right"/>
+	</subclass>
+	<subclass class="Set">
+		<property type="Expr" name="object"/>
+		<property type="Token" name="name"/>
+		<property type="Expr" name="value"/>
 	</subclass>
 	<subclass class="Unary">
 		<property type="Token" name="operator"/>

@@ -3,6 +3,10 @@
 	<subclass class="Block">
 		<property type="List&lt;Stmt&gt;" name="statements"/>
 	</subclass>
+	<subclass class="Class">
+		<property type="Token" name="name"/>
+		<property type="List&lt;Stmt.Function&gt;" name="methods"/>
+	</subclass>
 	<subclass class="Expression">
 		<property type="Expr" name="expression"/>
 	</subclass>
