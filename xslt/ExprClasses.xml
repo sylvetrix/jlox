@@ -34,6 +34,9 @@
 		<property type="Token" name="name"/>
 		<property type="Expr" name="value"/>
 	</subclass>
+	<subclass class="This">
+		<property type="Token" name="keyword"/>
+	</subclass>
 	<subclass class="Unary">
 		<property type="Token" name="operator"/>
 		<property type="Expr" name="right"/>
