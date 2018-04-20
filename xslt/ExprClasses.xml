@@ -34,6 +34,10 @@
 		<property type="Token" name="name"/>
 		<property type="Expr" name="value"/>
 	</subclass>
+	<subclass class="Super">
+		<property type="Token" name="keyword"/>
+		<property type="Token" name="method"/>
+	</subclass>
 	<subclass class="This">
 		<property type="Token" name="keyword"/>
 	</subclass>

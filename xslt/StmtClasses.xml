@@ -5,6 +5,7 @@
 	</subclass>
 	<subclass class="Class">
 		<property type="Token" name="name"/>
+		<property type="Expr.Variable" name="superclass"/>
 		<property type="List&lt;Stmt.Function&gt;" name="methods"/>
 	</subclass>
 	<subclass class="Expression">
